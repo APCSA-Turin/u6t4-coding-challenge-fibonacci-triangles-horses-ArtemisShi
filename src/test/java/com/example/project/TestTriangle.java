@@ -11,7 +11,7 @@ public class TestTriangle{
         Point p3 = new Point(18, 4);
         Triangle t = new Triangle(p1,p2,p3);
         Point[] expected = {p1,p2,p3};
-        assertArrayEquals(expected, t.getVertices(), "getVertices() doesn't return the correct results for triangle with points (5,10),(-6,17),(18,4)");
+        assertEquals(expected, t.getVertices(), "getVertices() doesn't return the correct results for triangle with points (5,10),(-6,17),(18,4)");
     }
 
     @Test
