@@ -31,8 +31,8 @@ public class Triangle {
     }
 
     //getter
-    public String getVertices(){
-      return vertices[0].pointInfo()+","+ vertices[1].pointInfo()+ ","+vertices[2].pointInfo();
+    public Point[] getVertices(){
+      return vertices;
     }
 
     //setter

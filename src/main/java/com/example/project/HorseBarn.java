@@ -34,8 +34,12 @@ public class HorseBarn {
     public String horseBarnInfo() {
         String horse="";
         for(int i=0; i<stalls.length;i++){
-            horse+= "Stall "+i+": name: "+ stalls[i].getName()+", weight:" +stalls[i].getWeight();
-        }
+            if(stalls[i]==null){
+                horse+="Stall "+i+": empty\n";
+            }
+            else{
+            horse+= "Stall "+i+": name: "+ stalls[i].getName()+", weight:" +stalls[i].getWeight()+"\n";
+        }}
         return horse;
     }
 
@@ -47,7 +51,7 @@ public class HorseBarn {
      *  @param stall  the index of stalls to place the Horse
      */
     public void placeHorse(Horse horse, int stall) {
-        /* to be implemented in part (c) */
+        stalls[stall]=horse;
     }
 
     /** Returns the index of the stall that contains the horse with the specified name.
@@ -59,8 +63,19 @@ public class HorseBarn {
      *          -1 if no horse with the specified name is in the barn.
      */
     public int findHorseStall(String name) {
-        /* to be implemented in part (d) */
-        return 0;
+        int stall=0;
+        for(int i=0; i<stalls.length;i++){
+            if(stalls[i]==null){
+                stall=-1;
+            }
+            else{
+            if(stalls[i].getName().equals(name)){
+                stall=i;
+                return stall;
+            }}
+        }
+        stall=-1;
+        return stall;
     }
 
     /** Consolidates the barn by moving horses so that the horses are in adjacent
@@ -69,6 +84,19 @@ public class HorseBarn {
      *  POSTCONDITION: The order of the horses is the same as before the consolidation.
      */
     public void consolidate() {
-        /* to be implemented in part (e) */
+        for(int i =0; i<stalls.length;i++){
+            if(stalls[i]==null){
+                boolean ns=false;
+                int stan=i;
+                while(ns==false&&stan<stalls.length){
+                    if(stalls[stan]!=null){
+                        ns=true;
+                        stalls[i]=stalls[stan];
+                        stalls[stan]=null;
+                    }
+                    stan++;
+                }
+            }
+        }
     }
 }

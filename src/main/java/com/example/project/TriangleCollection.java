@@ -39,6 +39,7 @@ public class TriangleCollection {
         collection[i]=new Triangle(p1,p2,p3);
       }
     }
+    
   
     // Calculate and return the sum of the perimeters of
     // all Triangles in the collection
