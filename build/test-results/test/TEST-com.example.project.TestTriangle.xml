@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.example.project.TestTriangle" tests="3" skipped="0" failures="1" errors="0" timestamp="2025-01-09T04:20:13" hostname="codespaces-181ad5" time="0.117">
+<testsuite name="com.example.project.TestTriangle" tests="3" skipped="0" failures="1" errors="0" timestamp="2025-01-09T04:37:32" hostname="codespaces-181ad5" time="0.105">
   <properties/>
-  <testcase name="testConstructorAndGetVertices()" classname="com.example.project.TestTriangle" time="0.034">
+  <testcase name="testConstructorAndGetVertices()" classname="com.example.project.TestTriangle" time="0.044">
     <failure message="org.opentest4j.AssertionFailedError: getVertices() doesn't return the correct results for triangle with points (5,10),(-6,17),(18,4) ==&gt; expected: [Lcom.example.project.Point;@31c7528f&lt;[com.example.project.Point@5ce8d869, com.example.project.Point@27eedb64, com.example.project.Point@64c63c79]&gt; but was: java.lang.String@2b76ff4e&lt;[com.example.project.Point@5ce8d869, com.example.project.Point@27eedb64, com.example.project.Point@64c63c79]&gt;" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: getVertices() doesn't return the correct results for triangle with points (5,10),(-6,17),(18,4) ==&gt; expected: [Lcom.example.project.Point;@31c7528f&lt;[com.example.project.Point@5ce8d869, com.example.project.Point@27eedb64, com.example.project.Point@64c63c79]&gt; but was: java.lang.String@2b76ff4e&lt;[com.example.project.Point@5ce8d869, com.example.project.Point@27eedb64, com.example.project.Point@64c63c79]&gt;
 	at app//org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:55)
 	at app//org.junit.jupiter.api.AssertionUtils.failNotEqual(AssertionUtils.java:62)
@@ -94,8 +94,8 @@
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 </failure>
   </testcase>
-  <testcase name="testTriangleInfo()" classname="com.example.project.TestTriangle" time="0.054"/>
-  <testcase name="testPerimeter()" classname="com.example.project.TestTriangle" time="0.001"/>
+  <testcase name="testTriangleInfo()" classname="com.example.project.TestTriangle" time="0.055"/>
+  <testcase name="testPerimeter()" classname="com.example.project.TestTriangle" time="0.002"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

@@ -34,6 +34,8 @@ public class TriangleCollection {
       Point p3= new Point(startX,0);
       for(int i =0; i<numTriangles;i++){
         p3= new Point(startX-i,0);
+        p2= new Point(0, startY);
+        p1= new Point(-startX,0);
         collection[i]=new Triangle(p1,p2,p3);
       }
     }
