@@ -12,26 +12,31 @@ public class HorseBarn {
      *  @param numStalls  the number of stalls in the barn
      */
     public HorseBarn(int numStalls) {
-        /* to be implemented in part (a) */
+        stalls=new Horse[numStalls];
     }
 
     /** Assigns stalls to reference sampleHorses
      */
     public HorseBarn(Horse[] sampleStalls) {
-        /* to be implemented in part (a) */
+        stalls=sampleStalls;
     }
 
     /** Getter/accessor method for stalls
      *
      *  @return  a references to the stalls array
      */
-    // to be added in part (a)
+    public Horse[] getStalls(){
+        return stalls;
+    }
 
     /** Returns a string that shows which horses are in which stalls
      */
     public String horseBarnInfo() {
-        /* to be implemented in part (b) */
-        return "";
+        String horse="";
+        for(int i=0; i<stalls.length;i++){
+            horse+= "Stall "+i+": name: "+ stalls[i].getName()+", weight:" +stalls[i].getWeight();
+        }
+        return horse;
     }
 
     /** Places a Horse into stalls at the index indicated by stall

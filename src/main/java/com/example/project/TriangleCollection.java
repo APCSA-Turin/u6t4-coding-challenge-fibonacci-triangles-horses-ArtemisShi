@@ -28,12 +28,13 @@ public class TriangleCollection {
   
     // PRECONDITION: numTriangles >= 2
     public TriangleCollection(int numTriangles, int startX, int startY) {
+      collection=new Triangle[numTriangles];
       Point p1= new Point(-startX,0);
       Point p2= new Point(0, startY);
       Point p3= new Point(startX,0);
-      for(int i =0; i< numTriangles;i++){
-        collection[i]=new Triangle(p1,p2,p3);
+      for(int i =0; i<numTriangles;i++){
         p3= new Point(startX-i,0);
+        collection[i]=new Triangle(p1,p2,p3);
       }
     }
   
@@ -44,6 +45,7 @@ public class TriangleCollection {
       for(Triangle tri:collection){
         sum+=tri.perimeter();
       }
+  
       return sum;
     }
   
@@ -66,8 +68,8 @@ public class TriangleCollection {
     //  [(1, 5), (5, 12), (7, 5)]"
     public String triangleCollectionInfo() {
       String st= "";
-      for(Triangle tri: collection){
-        st+= tri.triangleInfo() +"\n";
+      for(int i =0;i<collection.length;i++){
+        st+= collection[i].triangleInfo() +"\n";
       }
       return st;
     }
